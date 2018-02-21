@@ -9,9 +9,9 @@ def Main():
 	# loop with delay of 0.5s
 	count = 0
 	while (count < 5):
-		GPIO.output(17, GPIO.HIGH)
+		GPIO.output(11, GPIO.HIGH)
 		time.sleep(0.5)
-		GPIO.output(17, GPIO.LOW)
+		GPIO.output(11, GPIO.LOW)
 		time.sleep(0.5)
 		count = count + 1
 
