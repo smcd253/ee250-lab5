@@ -13,7 +13,7 @@ def Main():
 		time.sleep(0.5)
 		GPIO.output(17, GPIO.LOW)
 		time.sleep(0.5)
-		count++
+		count = count + 1
 
 	GPIO.cleanup()
 
