@@ -3,6 +3,7 @@ import time
 
 #set LED port for output
 GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
 GPIO.setup(11, GPIO.OUT)
 
 def Main():
