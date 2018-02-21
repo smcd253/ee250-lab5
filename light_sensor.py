@@ -4,12 +4,12 @@ import time
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
-GPIO.setup(23, GPIO.IN)
+GPIO.setup(21, GPIO.IN)
 
 def Main():
 	while True:
-		if GPIO.input(23):
-			data = GPIO.input(23)
+		if GPIO.input(21):
+			data = GPIO.input(21)
 		else:
 			print("no data")
 		time.sleep(0.1)
