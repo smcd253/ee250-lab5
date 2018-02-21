@@ -10,7 +10,7 @@ def Main():
 	while True:
 		if GPIO.input(23):
 			data = GPIO.input(23)
-		else
+		else:
 			print("no data")
 		time.sleep(0.1)
 
