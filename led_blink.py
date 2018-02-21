@@ -15,7 +15,7 @@ def Main():
 
 	# GPIO.cleanup()
 
-	p = GPIO.PWM(11, 0.125)
+	p = GPIO.PWM(11, 2)
 	p.start(1)
 	input('Press return to stop:')
 	p.stop
