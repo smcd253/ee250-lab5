@@ -5,7 +5,7 @@ import time
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(17, GPIO.OUT)
 
-def Main()
+def Main():
 	# loop with delay of 0.5s
 	# while True:
 	# 	GPIO.output(17, GPIO.HIGH)
