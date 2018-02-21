@@ -7,19 +7,21 @@ GPIO.setup(11, GPIO.OUT)
 
 def Main():
 	# loop with delay of 0.5s
-	# while True:
-	# 	GPIO.output(17, GPIO.HIGH)
-	# 	time.sleep(0.5)
-	# 	GPIO.output(17, GPIO.LOW)
-	# 	time.sleep(0.5)
+	count = 0
+	while (count < 5):
+		GPIO.output(17, GPIO.HIGH)
+		time.sleep(0.5)
+		GPIO.output(17, GPIO.LOW)
+		time.sleep(0.5)
+		count++
 
-	# GPIO.cleanup()
+	GPIO.cleanup()
 
-	p = GPIO.PWM(11, 2)
-	p.start(1)
-	input('Press return to stop:')
-	p.stop
-	GPIO.clenup()
+	# p = GPIO.PWM(11, 2)
+	# p.start(1)
+	# input('Press return to stop:')
+	# p.stop
+	# GPIO.clenup()
 
 if __name__ == '__main__':
 	Main()
