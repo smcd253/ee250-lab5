@@ -38,10 +38,10 @@ while count < end:
 
 	if ledOn:
 		GPIO.output(11, GPIO.HIGH)
-		ledOn = False
 	else:
 		GPIO.output(11, GPIO.LOW)
 
 	time.sleep(0.1)
 	count = count + 1
+	ledOn = False
 
