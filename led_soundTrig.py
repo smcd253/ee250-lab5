@@ -8,13 +8,6 @@ import time
 import Adafruit_GPIO.SPI as SPI
 import Adafruit_MCP3008
 
-import RPi.GPIO as GPIO
-
-#set LED port for output
-GPIO.setmode(GPIO.BOARD)
-GPIO.setwarnings(False)
-GPIO.setup(11, GPIO.OUT)
-
 # Hardware SPI configuration:
 SPI_PORT   = 0
 SPI_DEVICE = 0
@@ -23,16 +16,23 @@ mcp = Adafruit_MCP3008.MCP3008(spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
 count = 0
 end = 50
 lightChannel = 0
+soundChannel = 1
 threshold = 500
+ledOn = False
+
 # Main program loop.
 while count < end:
 	# read light level from pin
-	lightVal = mcp.read_adc(lightChannel)
-
-	if (lightVal < threshold):
-		print("DARK")
+	soundVal = mcp.read_adc(soundChannel)
+	print("soundVal = " + soundVal)
+	if (spoundVal > threshold):
+		ledOn = True
+	if ledOn:
+		GPIO.output(11, GPIO.HIGH)
+		ledOn = False
 	else:
-		print("LIGHT")
+		GPIO.output(11, GPIO.LOW)
+
 	time.sleep(0.1)
 	count = count + 1
 
