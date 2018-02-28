@@ -68,7 +68,6 @@ while True:
 	count = 0
 	print("Part4: control led with sound sensor for 5 seconds (100ms intervals)")
 	while count < end:
-		ledOn = False
 		# read light level from pin
 		soundVal = mcp.read_adc(soundChannel)
 		print("soundVal = " + str(soundVal))
@@ -82,7 +81,9 @@ while True:
 			GPIO.output(11, GPIO.LOW)
 
 		count = count + 1
-		time.sleep(0.1) # sleep 100ms
+		ledOn = False
+		time.sleep(0.1) # sleep 100ms	
+
 	
 	#p5
 	count = 0
