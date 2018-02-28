@@ -21,10 +21,10 @@ threshold = 500
 while count < end:
 	# read light level from pin
 	lightVal = mcp.read_adc(lightChannel)
-    
-    if lightVal < threshold:
-    	print("DARK")
-    else:
-    	print("LIGHT")
-    time.sleep(0.1)
+
+	if (lightVal < threshold):
+		print("DARK")
+	else:
+		print("LIGHT")
+	time.sleep(0.1)
 
