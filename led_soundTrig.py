@@ -24,7 +24,7 @@ count = 0
 end = 50
 lightChannel = 0
 soundChannel = 1
-threshold = 500
+threshold = 600
 ledOn = False
 
 # Main program loop.
