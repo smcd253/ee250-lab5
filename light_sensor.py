@@ -27,4 +27,5 @@ while count < end:
 	else:
 		print("LIGHT")
 	time.sleep(0.1)
+	count = count + 1
 
