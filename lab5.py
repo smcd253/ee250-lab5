@@ -52,7 +52,7 @@ while True:
 		else:
 			print("LIGHT")
 		count = count + 1
-		#loop time of while in python is 100ms by default
+		time.sleep(0.1) # sleep 100ms
 
 	#p3
 	count = 0
@@ -82,7 +82,7 @@ while True:
 			GPIO.output(11, GPIO.LOW)
 
 		count = count + 1
-		#loop time of while in python is 100ms by default
+		time.sleep(0.1) # sleep 100ms
 	
 	#p5
 	count = 0
