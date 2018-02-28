@@ -24,7 +24,7 @@ ledOn = False
 while count < end:
 	# read light level from pin
 	soundVal = mcp.read_adc(soundChannel)
-	print("soundVal = " + soundVal)
+	print("soundVal = " + str(soundVal)
 	if (spoundVal > threshold):
 		ledOn = True
 	if ledOn:
